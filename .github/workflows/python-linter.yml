@@ -1,7 +1,7 @@
 name: Python Linting
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 jobs:
@@ -27,4 +27,4 @@ jobs:
         run: |
           #pylint $(git ls-files '*.py')
           #pylint $(git diff --name-only --diff-filter=ACMR)
-          pylint $(git diff --staged --name-only --diff-filter=d -- '*.py')
+          pylint $(git diff-tree --no-commit-id --name-only -r origin/$CI_MERGE_REQUEST_TARGET_BRANCH_NAME -r $CI_COMMIT_SHA)
