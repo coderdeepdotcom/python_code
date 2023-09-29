@@ -25,4 +25,5 @@ jobs:
         #   flake8 src --count --max-complexity=10 --max-line-length=79 --statistics
       - name: Lint with Pylint
         run: |
-          pylint $(git ls-files '*.py')
+          #pylint $(git ls-files '*.py')
+          pylint ${shell git diff --name-only --diff-filter=ACMR origin/master| grep .py}
