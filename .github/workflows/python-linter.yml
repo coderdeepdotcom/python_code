@@ -26,4 +26,5 @@ jobs:
       - name: Lint with Pylint
         run: |
           #pylint $(git ls-files '*.py')
-          pylint $(git diff --name-only --diff-filter=ACMR)
+          #pylint $(git diff --name-only --diff-filter=ACMR)
+          pylint $(git ls-files [-m])
