@@ -27,4 +27,4 @@ jobs:
         run: |
           #pylint $(git ls-files '*.py')
           #pylint $(git diff --name-only --diff-filter=ACMR)
-          pylint $(git diff-tree --name-only -r $CI_MERGE_REQUEST_DIFF_BASE_SHA $CI_COMMIT_SHA))
+          pylint $(git diff-tree --name-only -r $CI_MERGE_REQUEST_DIFF_BASE_SHA $CI_COMMIT_SHA)
