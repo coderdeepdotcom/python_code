@@ -25,8 +25,8 @@ jobs:
         #   flake8 src --count --max-complexity=10 --max-line-length=79 --statistics
       - name: Lint with Pylint
         run: |
-          #pylint $(git ls-files '*.py')
+          pylint $(git ls-files '*.py')
           #pylint $(git diff --name-only --diff-filter=ACMR)
           #pylint $(git diff-tree --name-only -r $CI_MERGE_REQUEST_DIFF_BASE_SHA $CI_COMMIT_SHA)
-          DIFF=$(git diff --name-only --diff-filter=d $(git merge-base HEAD $BRANCH) | grep -E '\.py$')
-          pylint $DIFF
+          # DIFF=$(git diff --name-only --diff-filter=d $(git merge-base HEAD $BRANCH) | grep -E '\.py$')
+          # pylint $DIFF
