@@ -27,4 +27,4 @@ jobs:
         run: |
           #pylint $(git ls-files '*.py')
           #pylint $(git diff --name-only --diff-filter=ACMR)
-          pylint $(git diff-files)
+          pylint $(git diff --staged --name-only --diff-filter=d -- '*.py')
