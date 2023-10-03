@@ -2,9 +2,12 @@ name: Linter
 on:
   push:
     branches: [main]
-  pull_request:
-     branches: [main]
-     paths:
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - 'main'
+    paths:
       - '**.py'
   workflow_dispatch:
 jobs:
