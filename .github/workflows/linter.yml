@@ -4,7 +4,7 @@ on:
     branches: [main]
   pull_request_target:
     types:
-      - opened
+      - [opened, edited, reopened]
     branches:
       - 'main'
     paths:
