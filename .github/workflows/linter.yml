@@ -2,8 +2,9 @@ name: Linter
 on:
   push:
     branches: [main]
-  pull_request_target:
-    types: [assigned, opened, synchronize, reopened, edited]
+  pull_request:
+    paths:
+      - '**.yml'
   workflow_dispatch:
 jobs:
   linter:
