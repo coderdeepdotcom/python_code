@@ -7,8 +7,6 @@ on:
       - opened
       - edited
       - reopened
-    branches:
-      - 'main'
     paths:
       - '**.py'
   workflow_dispatch:
