@@ -9,3 +9,4 @@ Celcius = 37.5
 # calculate fahrenheit
 Fahrenhite = (Celcius * 1.8) + 32
 print(f'{Celcius} degree Celsius is equal to {Fahrenhite} degree Fahrenheit')
+
