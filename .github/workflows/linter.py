@@ -4,7 +4,7 @@ on:
     branches: [main]
   pull_request:
     paths:
-      - '*.py'
+      - '*.yml'
   workflow_dispatch:
 jobs:
   linter:
