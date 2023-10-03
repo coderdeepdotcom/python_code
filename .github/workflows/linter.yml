@@ -3,8 +3,6 @@ on:
   push:
     branches: [main]
   pull_request:
-    paths:
-      - '*.yml'
   workflow_dispatch:
 jobs:
   linter:
