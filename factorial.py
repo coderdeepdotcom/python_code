@@ -12,5 +12,3 @@ def factorial(num):
 print(factorial(5))
 
 
-
-
