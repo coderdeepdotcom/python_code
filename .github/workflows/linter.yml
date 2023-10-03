@@ -30,7 +30,7 @@ jobs:
         run: |
           #pylint $(git ls-files '*.py')
           #pylint $(git diff origin/main --name-only --diff-filter=d) works
-          flake8 $(git diff origin/main --name-only --diff-filter=d --'***.py')
+          flake8 $(git diff origin/main --name-only --diff-filter=d --"*.py")
           #pylint $(git diff --name-only --diff-filter=ACMR)
           #pylint $(git diff-tree --name-only -r $CI_MERGE_REQUEST_DIFF_BASE_SHA $CI_COMMIT_SHA)
           # DIFF=$(git diff --name-only --diff-filter=d $(git merge-base HEAD $BRANCH) | grep -E '\.py$')
