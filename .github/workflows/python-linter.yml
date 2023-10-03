@@ -8,7 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       # - name: Set up Python 3.8
       #   uses: actions/setup-python@v2
       #   with:
@@ -26,7 +29,7 @@ jobs:
       - name: Lint with Pylint
         run: |
           #pylint $(git ls-files '*.py')
-          pylint $(git diff main --name-only --diff-filter=d)
+          pylint $(git diff origin/main --name-only --diff-filter=d)
           #pylint $(git diff --name-only --diff-filter=ACMR)
           #pylint $(git diff-tree --name-only -r $CI_MERGE_REQUEST_DIFF_BASE_SHA $CI_COMMIT_SHA)
           # DIFF=$(git diff --name-only --diff-filter=d $(git merge-base HEAD $BRANCH) | grep -E '\.py$')
