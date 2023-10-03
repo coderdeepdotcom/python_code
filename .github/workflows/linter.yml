@@ -30,7 +30,7 @@ jobs:
         run: |
           #pylint $(git ls-files '*.py')
           #pylint $(git diff origin/main --name-only --diff-filter=d) works
-          if (git diff origin/main --name-only --diff-filter=d == *.py)
+          if (git diff origin/main --name-only --diff-filter=d -eq *.py)
           {
             flake8 $(git diff origin/main --name-only --diff-filter=d)
           }
