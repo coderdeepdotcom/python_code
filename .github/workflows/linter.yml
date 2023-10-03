@@ -2,11 +2,7 @@ name: Linter
 on:
   push:
     branches: [main]
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - reopened
+  pull_request:
     paths:
       - '**.py'
   workflow_dispatch:
