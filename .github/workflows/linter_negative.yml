@@ -1,0 +1,14 @@
+name: Linter
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - '!**.py'
+  workflow_dispatch:
+jobs:
+  linter:
+    runs-on: windows-latest
+    steps:
+      - name: Success
+        run: exit 0
