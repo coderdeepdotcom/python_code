@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   pull_request:
+    paths:
+      - '**.py'
   workflow_dispatch:
 jobs:
   linter:
@@ -35,3 +37,4 @@ jobs:
           #pylint $(git diff-tree --name-only -r $CI_MERGE_REQUEST_DIFF_BASE_SHA $CI_COMMIT_SHA)
           # DIFF=$(git diff --name-only --diff-filter=d $(git merge-base HEAD $BRANCH) | grep -E '\.py$')
           # pylint $DIFF
+
